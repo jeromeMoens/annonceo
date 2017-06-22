@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Annonceo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="">
 </head>
 <body>
@@ -14,7 +15,7 @@
 				<a href="" title="Annonceo">Annonceo</a>
 			</span>
 			<nav>
-				<?php	
+				<?php
 					if(internauteEstConnecteEtEstAdmin())
 					{// BackOffice
 						echo '<a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a>';
@@ -36,7 +37,7 @@
 						echo '<a href="' . URL . 'annonces.php">Voir les annonces</a>';
 						echo '<a href="' . URL . 'connexion.php">Connexion</a>';
 					}
-					
+
 					?>
 			</nav>
 		</div>
