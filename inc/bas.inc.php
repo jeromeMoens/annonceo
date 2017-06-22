@@ -4,7 +4,8 @@
 
 	<footer>
 		<div class="conteneur">
-			<?php echo date('Y'); ?> - Tous droits réservés
+			<a href="">Mentions légales</a>
+			<a href="">Conditions générales de vente</a>
 		</div>
 	</footer>
 	
