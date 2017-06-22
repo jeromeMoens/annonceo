@@ -4,14 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Annonceo</title>
+
+
 	<!-- Latest compiled and minified CSS -->
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="">
 </head>
 <body>
 
 	<header>
-		<div class="conteneur">
+		<div class="container">
+
+			<span>
+				<a href="" title="Annonceo">Annonceo</a>
+			</span>
+			<nav>
+				<?php
+
 			<nav class="navbar navbar-default">
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,6 +49,7 @@
 			      </form>
 			      
 					<?php	
+
 					if(internauteEstConnecteEtEstAdmin())
 					{// BackOffice
 						echo '<ul class="nav navbar-nav navbar-right"><li class="dropdown"><ul class="dropdown-menu"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
@@ -48,6 +59,8 @@
 						echo '<li><a href="' . URL . 'admin/gestion_notes.php">Gestion des notes</a></li>';
 						echo '<li><a href="' . URL . 'admin/statistiques.php">Statistiques</a></li></ul></li></ul>';
 					}
+
+
 					?>
 				  </ul>
 				  <?php
@@ -72,4 +85,6 @@
 	</header>
 
 	<section>
+
 		<div class="container">
+
