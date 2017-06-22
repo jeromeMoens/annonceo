@@ -67,7 +67,7 @@ require_once("inc/haut.inc.php");
 echo $content;
 ?>
 
-<form class="form-horizontal">
+<form class="form-horizontal" method="POST" action="">
 	<fieldset>
 
 
