@@ -16,12 +16,6 @@
 	<header>
 		<div class="container">
 
-			<span>
-				<a href="" title="Annonceo">Annonceo</a>
-			</span>
-			<nav>
-				<?php
-
 			<nav class="navbar navbar-default">
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,8 +41,8 @@
 			        </div>
 			        <button type="submit" class="btn btn-default">Recherche</button>
 			      </form>
-			      
-					<?php	
+
+					<?php
 
 					if(internauteEstConnecteEtEstAdmin())
 					{// BackOffice
@@ -87,4 +81,3 @@
 	<section>
 
 		<div class="container">
-
