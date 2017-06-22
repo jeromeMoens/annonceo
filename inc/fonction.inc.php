@@ -19,30 +19,35 @@ function debug($var, $mode = 1)
 }
 
 
+//-------------------------------------
 
-//-----------------------------------------------------------------
 function internauteEstConnecte()
 {
-	if(!isset($_SESSION['membre'])) // si la session "membre" n'est pas définie (elle l'est si il y a eu une connexion)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
+    if(!isset($_SESSION['membre'])) // si la session "membre" est non définie (elle ne peut être définie que si nous sommes passés par la page de connexion avec le bon mot de passe)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
-//-----------------------------------------------------------------
-function internauteEstConnecteEtEstAdmin()
+//-------------------------------------
+
+function internauteEstConnecteEtEstAdmin() // cette fonction m'indique si le membre est admin
 {
-	if(internauteEstConnecte() && $_SESSION['membre']['statut']==1) // si l'internaute est connecté ET a le statut 1, c'est-à-dire admin
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+    if(internauteEstConnecte() && $_SESSION['membre']['statut'] == 1) // si la section du membre est définie, nous regardons s'il est admin, si c'est le cas, nous retournons true
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
+
 ?>
+
+
+
