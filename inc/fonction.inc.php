@@ -18,6 +18,7 @@ function debug($var, $mode = 1)
 	}
 }
 
+
 //-------------------------------------
 
 function internauteEstConnecte()
@@ -47,3 +48,6 @@ function internauteEstConnecteEtEstAdmin() // cette fonction m'indique si le mem
 }
 
 ?>
+
+
+
