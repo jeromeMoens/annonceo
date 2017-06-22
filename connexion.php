@@ -1,6 +1,10 @@
 <?php
 require_once("inc/init.inc.php");
-
+if(isset($_GET['action']) && $_GET['action'] == 'deconnexion')
+{
+    unset($_SESSION['membre']);
+    unset($_SESSION['panier']);
+}
 // si l'internaute est connecté, on le renvoie vers son profil
 if(internauteEstConnecte())
 {
@@ -25,9 +29,9 @@ if($_POST)
             $_SESSION['membre']['pseudo'] = $membre['pseudo'];
             $_SESSION['membre']['nom'] = $membre['nom'];
             $_SESSION['membre']['prenom'] = $membre['prenom'];
-            $_SESSION['membre']['telephone'] = $membre['email'];
-            $_SESSION['membre']['email'] = $membre['civilite'];
-            $_SESSION['membre']['civilite'] = $membre['ville'];
+            $_SESSION['membre']['telephone'] = $membre['telephone'];
+            $_SESSION['membre']['email'] = $membre['email'];
+            $_SESSION['membre']['civilite'] = $membre['civilite'];
             $_SESSION['membre']['statut'] = $membre['statut'];
             header("location:profil.php");
       }
