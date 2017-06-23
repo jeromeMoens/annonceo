@@ -11,7 +11,7 @@ if(!internauteEstConnecteEtEstAdmin())
 if(isset($_GET['action']) && $_GET['action'] == 'suppression')
 {
     $pdo->query("DELETE FROM membre WHERE id_membre='$_GET[id_membre]'");
-    $content .= "<div class='validation'>Le membre n° " . $_GET['id_membre'] . " a bien été supprimé.</div>";
+    $content .= "<div class='alert alert-success'>Le membre n° " . $_GET['id_membre'] . " a bien été supprimé.</div>";
     $_GET['action'] = 'affichage';
 }
 
