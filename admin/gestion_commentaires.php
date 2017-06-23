@@ -89,7 +89,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'affichage')
 
 $r = $pdo->query("SELECT * FROM commentaire");
 $content .= "<h1>Affichage des " . $r->rowCount() . " commentaire(s)</h1>";
-$content .= "<table border='1'><tr>";
+$content .= "<table class='table table striped'><tr>";
 
 for($i = 0; $i < $r->columnCount(); $i++)
 {
