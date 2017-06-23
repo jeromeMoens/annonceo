@@ -48,7 +48,7 @@ if($_POST) // si je clique sur le bouton submit, il y a une action sur le formul
 	{
 		$req = "INSERT INTO membre (pseudo,mdp,nom,prenom,telephone,email,civilite) VALUES (:pseudo,:mdp,:nom,:prenom,:telephone,:email,:civilite)";
 
-		$prepare = $PDO->prepare($req);
+		$prepare = $pdo->prepare($req);
 
 		$prepare->bindParam(':pseudo', $_POST['pseudo']);
 		$prepare->bindParam(':mdp', $_POST['mdp']);
