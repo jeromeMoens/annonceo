@@ -21,7 +21,9 @@ require_once("../inc/haut.inc.php");
 
 $r = $pdo->query("SELECT * FROM membre");
 $content .= "<h1>Affichage des " . $r->rowCount() . " membres</h1>";
-$content .= "<table border='1'><tr>";
+
+$content .= "<table class='table table-striped'><tr>";
+
 for($i = 0; $i < $r->columnCount(); $i++)
 {
     $colonne = $r->getColumnMeta($i);
@@ -61,23 +63,30 @@ if(isset($_GET['action']) && $_GET['action'] == 'modification')
     $civilite = isset($membre_actuel['civilite']) ? $membre_actuel['civilite'] : '';
     $statut = isset($membre_actuel['statut']) ? $membre_actuel['statut'] : '';
 
-if($_POST)
-{
-    $content .= '<div class="validation">Le produit a bien été modifié/créé</div>';
-        $req_modif_membre = "REPLACE INTO membre(pseudo, nom, prenom, telephone, email, civilite, statut) VALUES (:pseudo, :nom, :prenom, :telephone, :email, :civilite, :statut)";
-        $r_membre = $pdo->prepare($req_modif_membre);
-        $r_membre->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
-        $r_membre->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR); // le paramètre de la requête SQL, la valeur qu'on lie, le type attendu
-        $r_membre->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
-        $r_membre->bindValue(':telephone', $_POST['telephone'], PDO::PARAM_STR);
-        $r_membre->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
-        $r_membre->bindValue(':civilite', $_POST['civilite'], PDO::PARAM_STR);
-        $r_membre->bindValue(':statut', $_POST['statut'], PDO::PARAM_STR);
-        $r_membre->execute();
-}
-$content .=
+
+  if($_POST)
+  {
+      $content .= '<div class="validation">Le produit a bien été modifié/créé</div>';
+          $req_modif_membre = "REPLACE INTO membre(id_membre, pseudo, nom, prenom, telephone, email, civilite, statut) VALUES (:id_membre, :pseudo, :nom, :prenom, :telephone, :email, :civilite, :statut)";
+          $r_membre = $pdo->prepare($req_modif_membre);
+          $r_membre->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_STR);
+          $r_membre->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+          $r_membre->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR); // le paramètre de la requête SQL, la valeur qu'on lie, le type attendu
+          $r_membre->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+          $r_membre->bindValue(':telephone', $_POST['telephone'], PDO::PARAM_STR);
+          $r_membre->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+          $r_membre->bindValue(':civilite', $_POST['civilite'], PDO::PARAM_STR);
+          $r_membre->bindValue(':statut', $_POST['statut'], PDO::PARAM_STR);
+          $r_membre->execute();
+  }
+echo
     '<form method="POST">
       <div class="form-group">
+        <label for="id">Id_membre</label>
+        <input type="text" class="form-control" id="id" name="id_membre" placeholder="Id_membre" value="'. $id_membre .'">
+      </div>
+      <div class="form-group">
+
         <label for="pseudo">Pseudo</label>
         <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" value="'. $pseudo .'">
       </div>
@@ -100,15 +109,19 @@ $content .=
       <div class="form-group">
       <label for="civilite">Civilité</label>
       <select class="form-control" id="civilite" name="civilite">
-        <option value="m">Homme</option>
-        <option value="f">Femme</option>
+
+        <option value="m"'; if($civilite == "m") echo 'selected'; echo'>Homme</option>
+        <option value="f"'; if($civilite == "f") echo 'selected'; echo'>Femme</option>
+
       </select>
       </div>
       <div class="form-group">
       <label for="statut">Statut</label>
       <select class="form-control" id="statut" name="statut">
-        <option value="0">Membre</option>
-        <option value="1">Admin</option>
+
+        <option value="0"'; if($statut == 0) echo 'selected'; echo'>Membre</option>
+        <option value="1"'; if($statut == 1) echo 'selected'; echo'>Admin</option>
+
       </select>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>

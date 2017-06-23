@@ -42,6 +42,7 @@
 			        <button type="submit" class="btn btn-default">Recherche</button>
 			      </form>
 
+
 				  <?php
 				  if(internauteEstConnecte())// membre du site ayant un compte
 				  {
