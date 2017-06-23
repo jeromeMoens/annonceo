@@ -22,4 +22,5 @@ $content = ''; // variable initialisée à vide qui permettra de contenir tous l
 //-------------------- INCLUSIONS DES FONCTIONS
 require_once('fonction.inc.php');
 
+
 ?>
