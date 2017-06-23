@@ -44,7 +44,7 @@ if(!empty($_POST))
 
 	if(!empty($content))
 		{
-			$content .= '<div class"success">Le produit a été enregistré avec succès !</div>';
+			$content .= '<div class"success">Le commentaire a été enregistré avec succès !</div>';
 		}		
 }
 

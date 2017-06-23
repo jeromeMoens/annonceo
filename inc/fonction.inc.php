@@ -47,7 +47,5 @@ function internauteEstConnecteEtEstAdmin() // cette fonction m'indique si le mem
     }
 }
 
+
 ?>
-
-
-
