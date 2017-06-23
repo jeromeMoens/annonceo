@@ -15,7 +15,7 @@ if(internauteEstConnecte())
 // Verification qu'il y a quelque chose en POST
 if($_POST)
 {
-  debug($_POST);
+  //debug($_POST);
   //Si oui, alors on récupère le pseudo en BDD par rapport à ce que l'utilisateur a rentré en POST
     $r = $pdo->query("SELECT * FROM membre WHERE pseudo='$_POST[pseudo]'");
     if($r->rowCount() >= 1)

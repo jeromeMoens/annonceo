@@ -21,7 +21,7 @@ require_once("../inc/haut.inc.php");
 
 $r = $pdo->query("SELECT * FROM membre");
 $content .= "<h1>Affichage des " . $r->rowCount() . " membres</h1>";
-$content .= "<table border='1'><tr>";
+$content .= "<table class='table table-striped'><tr>";
 for($i = 0; $i < $r->columnCount(); $i++)
 {
     $colonne = $r->getColumnMeta($i);
@@ -61,21 +61,21 @@ if(isset($_GET['action']) && $_GET['action'] == 'modification')
     $civilite = isset($membre_actuel['civilite']) ? $membre_actuel['civilite'] : '';
     $statut = isset($membre_actuel['statut']) ? $membre_actuel['statut'] : '';
 
-if($_POST)
-{
-    $content .= '<div class="validation">Le produit a bien été modifié/créé</div>';
-        $req_modif_membre = "REPLACE INTO membre(id_membre, pseudo, nom, prenom, telephone, email, civilite, statut) VALUES (:id_membre, :pseudo, :nom, :prenom, :telephone, :email, :civilite, :statut)";
-        $r_membre = $pdo->prepare($req_modif_membre);
-        $r_membre->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_STR);
-        $r_membre->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
-        $r_membre->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR); // le paramètre de la requête SQL, la valeur qu'on lie, le type attendu
-        $r_membre->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
-        $r_membre->bindValue(':telephone', $_POST['telephone'], PDO::PARAM_STR);
-        $r_membre->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
-        $r_membre->bindValue(':civilite', $_POST['civilite'], PDO::PARAM_STR);
-        $r_membre->bindValue(':statut', $_POST['statut'], PDO::PARAM_STR);
-        $r_membre->execute();
-}
+  if($_POST)
+  {
+      $content .= '<div class="validation">Le produit a bien été modifié/créé</div>';
+          $req_modif_membre = "REPLACE INTO membre(id_membre, pseudo, nom, prenom, telephone, email, civilite, statut) VALUES (:id_membre, :pseudo, :nom, :prenom, :telephone, :email, :civilite, :statut)";
+          $r_membre = $pdo->prepare($req_modif_membre);
+          $r_membre->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_STR);
+          $r_membre->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+          $r_membre->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR); // le paramètre de la requête SQL, la valeur qu'on lie, le type attendu
+          $r_membre->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+          $r_membre->bindValue(':telephone', $_POST['telephone'], PDO::PARAM_STR);
+          $r_membre->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+          $r_membre->bindValue(':civilite', $_POST['civilite'], PDO::PARAM_STR);
+          $r_membre->bindValue(':statut', $_POST['statut'], PDO::PARAM_STR);
+          $r_membre->execute();
+  }
 echo
     '<form method="POST">
       <div class="form-group">
