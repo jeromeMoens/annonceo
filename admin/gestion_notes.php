@@ -121,29 +121,6 @@ $content .= "</table>";
 
 echo $content;
 
-?>
-
-
-
-<!DOCTYPE html>
-<head>
-<meta charset="UTF-8">
-	<title>Formulaire notes</title>
-	<link rel="stylesheet" href="../inc/css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	
-	<link href="css/star-rating.css" rel="stylesheet">
-
-
-
-</head>
-		
-</html>
-
-
-<?php
-
-
 
 if(isset($_GET['action']) && $_GET['action'] == 'voir' ||isset($_GET['action']) && $_GET['action'] == 'ajout' ||isset($_GET['action']) && $_GET['action'] == 'modification')
 {
@@ -205,15 +182,6 @@ if(isset($_GET['action']) && $_GET['action'] == 'voir' ||isset($_GET['action']) 
 		  <button type="submit" class="btn btn-default" href="#" value="Envoyer">Enregistrer</button>
 	</form>
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>	
-
-	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/star-rating.min.js"></script>
-    <script src="js/star-rating.js"></script>
-    <script>
-	var starrating = new StarRating( document.getElementById( 'star-rating' ));
-	</script>
 
 
 

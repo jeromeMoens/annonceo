@@ -1,7 +1,7 @@
 //-------------------------------------
 //---- SYSTEME DE NOTATION ETOILE ----
 
-var starrating = new StarRating( document.getElementById( 'star-rating' ));
+//var starrating = new StarRating( document.getElementById( 'star-rating' ));
 
 
 // Initialisation de la classe javascript
