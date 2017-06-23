@@ -50,11 +50,12 @@
 					if(internauteEstConnecteEtEstAdmin())
 					{// BackOffice
 
-						echo '<li><a href="' . URL . 'admin/gestion_annonces.php">Gestion des annonces</a></li>
-						      <li><a href="' . URL . 'admin/gestion_categories.php">Gestion des catégories</a></li>
-						      <li><a href="' . URL . 'admin/gestion_commentaires.php">Gestion des commentaires</a></li>
-						      <li><a href="' . URL . 'admin/gestion_notes.php">Gestion des notes</a></li>
-						      <li><a href="' . URL . 'admin/statistiques.php">Statistiques</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_annonces.php?action=affichage">Gestion des annonces</a></li>
+						      <li><a href="' . URL . 'admin/gestion_categories.php?action=affichage">Gestion des catégories</a></li>
+						      <li><a href="' . URL . 'admin/gestion_membres.php?action=affichage">Gestion des membres</a></li>
+						      <li><a href="' . URL . 'admin/gestion_commentaires.php?action=affichage">Gestion des commentaires</a></li>
+						      <li><a href="' . URL . 'admin/gestion_notes.php?action=affichage">Gestion des notes</a></li>
+						      <li><a href="' . URL . 'admin/statistiques.php?action=affichage">Statistiques</a></li>';
 					}
 					echo '<li><a href="' . URL . 'profil.php">Voir votre profil</a><li>';
 					echo '<li><a href="' . URL . 'annonces.php">Voir les annonces</a></li>';
