@@ -284,4 +284,3 @@ INSERT INTO annonce (titre, description_courte, description_longue, prix, photo,
 ('Charming & Cosy Flat', 'Charming & Cosy Flat in Le Marais ', 'Bonjour, Cet appartement lumineux et bien équipé est situé au coeur de Paris dans l un des quartiers touristiques les plus populaires: Le Marais. À seulement 300 mètres de la Place des Vosges, cet appartement est la base idéale pour votre séjour à Paris. Ce charmant appartement comprend une chambre double, un salon, un coin repas, une cuisine bien équipée et une salle de bains.
 À bientôt !
 ', 500, 'https://img1.leboncoin.fr/ad-image/ec5ed9c2d32e63e1bcba6c269499e9d40fd889e8.jpg', 'France', 'Paris', '12, rue Barbette', '75003', '', 6, 6, '');
-
