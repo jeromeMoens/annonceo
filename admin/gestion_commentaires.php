@@ -162,6 +162,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'voir' ||isset($_GET['action']) 
 	<form method="POST" action="#" enctype="multipart/form-data">
 
 		  <div class="form-group">
+
 		    <input type="hidden" class="form-control" id="id_commentaire" name="id_commentaire" value="<?php echo $id_commentaire; ?>">
 		  </div>
 
@@ -170,6 +171,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'voir' ||isset($_GET['action']) 
 		  </div>
 
 		  <div class="form-group">		    
+
 		    <input type="hidden" class="form-control" id="id_annonce" name="id_annonce" value="<?php echo $id_annonce; ?>">
 		  </div>
 
