@@ -21,7 +21,9 @@ require_once("../inc/haut.inc.php");
 
 $r = $pdo->query("SELECT * FROM membre");
 $content .= "<h1>Affichage des " . $r->rowCount() . " membres</h1>";
+
 $content .= "<table class='table table-striped'><tr>";
+
 for($i = 0; $i < $r->columnCount(); $i++)
 {
     $colonne = $r->getColumnMeta($i);
@@ -61,6 +63,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'modification')
     $civilite = isset($membre_actuel['civilite']) ? $membre_actuel['civilite'] : '';
     $statut = isset($membre_actuel['statut']) ? $membre_actuel['statut'] : '';
 
+
   if($_POST)
   {
       $content .= '<div class="validation">Le produit a bien été modifié/créé</div>';
@@ -83,6 +86,7 @@ echo
         <input type="text" class="form-control" id="id" name="id_membre" placeholder="Id_membre" value="'. $id_membre .'">
       </div>
       <div class="form-group">
+
         <label for="pseudo">Pseudo</label>
         <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" value="'. $pseudo .'">
       </div>
@@ -105,15 +109,19 @@ echo
       <div class="form-group">
       <label for="civilite">Civilité</label>
       <select class="form-control" id="civilite" name="civilite">
+
         <option value="m"'; if($civilite == "m") echo 'selected'; echo'>Homme</option>
         <option value="f"'; if($civilite == "f") echo 'selected'; echo'>Femme</option>
+
       </select>
       </div>
       <div class="form-group">
       <label for="statut">Statut</label>
       <select class="form-control" id="statut" name="statut">
+
         <option value="0"'; if($statut == 0) echo 'selected'; echo'>Membre</option>
         <option value="1"'; if($statut == 1) echo 'selected'; echo'>Admin</option>
+
       </select>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>

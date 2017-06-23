@@ -219,9 +219,11 @@ INSERT INTO categorie (id_categorie, titre, motscles) VALUES
 ('', 'Vacances', 'locations & gîtes, chambres d\'hôtes, campings, hôtels');
 
 
+
 /*-------------------------------------*/
 
 /*PHOTOS de catégorie 5: Maison*/
+
 INSERT INTO photo (id_photo, photo1, photo2, photo3, photo4, photo5) VALUES
 ('', 'https://img0.leboncoin.fr/ad-large/78727fa1aeed325ce311ced85f69ad0edab03dba.jpg', 'https://img5.leboncoin.fr/ad-large/5fb17d00f123340edf1cfc4d39e82466f38f8334.jpg', '', '', ''),
 ('', 'https://img6.leboncoin.fr/ad-large/8f5e250266f382b415b7d6f44372651c39750d85.jpg', 'https://img7.leboncoin.fr/ad-large/f39605ccd40dc32c0eb5086b42794dca5ee7cea7.jpg', 'https://img6.leboncoin.fr/ad-large/c983eca9711194ab9594ce90ac1ded243b041a2e.jpg', '', ''),
@@ -232,11 +234,13 @@ INSERT INTO photo (id_photo, photo1, photo2, photo3, photo4, photo5) VALUES
 
 
 
+
 /*ANNONCES de catégorie 5: Maison*/
 INSERT INTO annonce (id_annonce, titre, description_courte, description_longue, prix, photo, pays, ville, adresse, cp, id_membre, id_photo, id_categorie, date_enregistrement) VALUES
 
 ('', 'Combiné fourmicro-ondesgrill SAMSUNG', 'Combiné fourmicro-ondesgrill SAMSUNG', 'Suite à un déménagement je dois me séparer de mon super four micro-ondes combiné Samsung, acheté en mars 2016. Sous garantie jusqu’à mars 2018.
 Fonctions four, grill, micro-onde et combiné. Cuisson croustillante = très pratique pour les pizzas et quiches !
+
 - Modèle : Samsung CE107MT-4B
 - Diamètre du plateau : 31,8 cm
 - Capacité : 28 l
@@ -280,3 +284,4 @@ INSERT INTO annonce (titre, description_courte, description_longue, prix, photo,
 ('Charming & Cosy Flat', 'Charming & Cosy Flat in Le Marais ', 'Bonjour, Cet appartement lumineux et bien équipé est situé au coeur de Paris dans l un des quartiers touristiques les plus populaires: Le Marais. À seulement 300 mètres de la Place des Vosges, cet appartement est la base idéale pour votre séjour à Paris. Ce charmant appartement comprend une chambre double, un salon, un coin repas, une cuisine bien équipée et une salle de bains.
 À bientôt !
 ', 500, 'https://img1.leboncoin.fr/ad-image/ec5ed9c2d32e63e1bcba6c269499e9d40fd889e8.jpg', 'France', 'Paris', '12, rue Barbette', '75003', '', 6, 6, '');
+
