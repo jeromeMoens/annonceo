@@ -2,17 +2,16 @@
 <!DOCTYPE html>
 <html lang="FR-fr">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" />
 	<title>Annonceo</title>
 
 
 	<!-- Latest compiled and minified CSS -->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="<?= RACINE_SITE ?>inc/css/style.css" />
 </head>
 <body>
-
 	<header>
 		<div class="container">
 
@@ -42,22 +41,25 @@
 			        <button type="submit" class="btn btn-default">Recherche</button>
 			      </form>
 
+					<?php
 
+					if(internauteEstConnecteEtEstAdmin())
+					{// BackOffice
+						echo '<ul class="nav navbar-nav navbar-right"><li class="dropdown"><ul class="dropdown-menu"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_annonces.php">Gestion des annonces</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_categories.php">Gestion des catégories</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php">Gestion des commentaires</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_notes.php">Gestion des notes</a></li>';
+						echo '<li><a href="' . URL . 'admin/statistiques.php">Statistiques</a></li></ul></li></ul>';
+					}
+
+
+					?>
+				  </ul>
 				  <?php
 				  if(internauteEstConnecte())// membre du site ayant un compte
 				  {
-					echo '<ul class="nav navbar-nav navbar-right">';
-					if(internauteEstConnecteEtEstAdmin())
-					{// BackOffice
-
-						echo '<li><a href="' . URL . 'admin/gestion_annonces.php?action=affichage">Gestion des annonces</a></li>
-						      <li><a href="' . URL . 'admin/gestion_categories.php?action=affichage">Gestion des catégories</a></li>
-						      <li><a href="' . URL . 'admin/gestion_membres.php?action=affichage">Gestion des membres</a></li>
-						      <li><a href="' . URL . 'admin/gestion_commentaires.php?action=affichage">Gestion des commentaires</a></li>
-						      <li><a href="' . URL . 'admin/gestion_notes.php?action=affichage">Gestion des notes</a></li>
-						      <li><a href="' . URL . 'admin/statistiques.php?action=affichage">Statistiques</a></li>';
-					}
-					echo '<li><a href="' . URL . 'profil.php">Voir votre profil</a><li>';
+					echo '<ul class="nav navbar-nav navbar-right"><li><a href="' . URL . 'profil.php">Voir votre profil</a><li>';
 					echo '<li><a href="' . URL . 'annonces.php">Voir les annonces</a></li>';
 					echo '<li><a href="' . URL . 'connexion.php?action=deconnexion"><span class="glyphicon glyphicon-user"></span> Se déconnecter</a></li></ul>';
 				  }

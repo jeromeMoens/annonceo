@@ -274,6 +274,10 @@ Ou pour voir mes autres annonces taper : Mrpaschère
 /*PHOTOS de catégorie 5: Vacances*/
 INSERT INTO photo (id_photo, photo1, photo2, photo3, photo4, photo5) VALUES
 ('', 'https://img1.leboncoin.fr/ad-image/ec5ed9c2d32e63e1bcba6c269499e9d40fd889e8.jpg', 'https://img6.leboncoin.fr/ad-large/324f5c76bddc64bab3dad79bae868ac22fe463a5.jpg', 'https://img3.leboncoin.fr/ad-large/e0986e1d0bd59d4cf64328806634560ea47f7bdf.jpg', 'https://img1.leboncoin.fr/ad-large/38747869f2263f5403ed51531a4b6aec791ca8a1.jpg', 'https://img3.leboncoin.fr/ad-large/770a096c4db8fd25f4ff32dbe37a1e13332e0e13.jpg'),
+('', 'https://img4.leboncoin.fr/ad-large/2d286ec2bcefecc092108ce130b62f703eab7fd0.jpg', 'https://img0.leboncoin.fr/ad-large/4f0495bcd0cf3ef42f10ba73025e0747be2ab2d7.jpg', 'https://img1.leboncoin.fr/ad-large/68931a42568514aac94914cc895fdb5110a2df70.jpg', '', ''),
+('', 'https://img0.leboncoin.fr/ad-image/fab5516138fd3a28db5c1ea04ba1227091500f9a.jpg', 'https://img0.leboncoin.fr/ad-large/ead9192fc329f3de96cfc95233e943536de451db.jpg', 'https://img3.leboncoin.fr/ad-large/97b014a72d32ce5e166da358fad368bab7959c32.jpg', '', ''),
+('', 'https://img3.leboncoin.fr/ad-large/f40201bbebc855b95f87caba3b8cbe32325ae38a.jpg', 'https://img3.leboncoin.fr/ad-large/3258438d8d69141a828cbd02288692d76d2ff663.jpg', 'https://img2.leboncoin.fr/ad-large/d8704905cb5526ba25428780ed604e47e18d566e.jpg', '', ''),
+('', 'https://img3.leboncoin.fr/ad-large/a0a4c921681e00c180b5d21ad0387805b45b631d.jpg', 'https://img7.leboncoin.fr/ad-large/55adaeeb1b7759a15cdb7260bfeecdf9528bfa2e.jpg', 'https://img4.leboncoin.fr/ad-large/47ca7bbfd1aec5a1cb18638b05efe6fe02df68bf.jpg', 'https://img3.leboncoin.fr/ad-large/685062bb1464cf7b621c4a027d388ac4e02a84ca.jpg', 'https://img5.leboncoin.fr/ad-large/2c373caf36dc90bf6e862f85f9e247bfeeb21f7f.jpg');
 
 
 
@@ -283,4 +287,34 @@ INSERT INTO annonce (titre, description_courte, description_longue, prix, photo,
 
 ('Charming & Cosy Flat', 'Charming & Cosy Flat in Le Marais ', 'Bonjour, Cet appartement lumineux et bien équipé est situé au coeur de Paris dans l un des quartiers touristiques les plus populaires: Le Marais. À seulement 300 mètres de la Place des Vosges, cet appartement est la base idéale pour votre séjour à Paris. Ce charmant appartement comprend une chambre double, un salon, un coin repas, une cuisine bien équipée et une salle de bains.
 À bientôt !
+<<<<<<< HEAD
+', 500, 'https://img1.leboncoin.fr/ad-image/ec5ed9c2d32e63e1bcba6c269499e9d40fd889e8.jpg', 'France', 'Paris', '12, rue Barbette', '75003', '', 6, 6, ''),
+
+('Appartement 68m² pour6 avec Climatisation', 'Appartement 68m² pour6 avec Climatisation', 'Location de vacances Bed and Breakfast
+2 CHAMBRES pour 4 personnes, Prix : 69€/nuits, 2 nuits minimum + 22€ de forfait nettoyage.
+La Caution est de 350€ en liquide à l entrée .Réception ouverte 24 sur 24h 2 Chambres avec porte fenètre, balcon orienté sud, équipé de Wifi, Télé, lit double. Dans un appartement Calme et lumineux pour 4 personnes dans un beau 3 pièces entièrement rénové en centre-ville avec de nombreux commerces et moyen de transport, métro au pied de l immeuble. A deux pas du marché aux puces (5 millions de visiteur par an), et de la colline des peintres de Montmartre, Cuisine dinatoire toute équipée , salle de bain baignoire, wc séparé.
+Métro ligne n°13 Garibaldi et n°4 porte de Clignancourt 
+', 390, 'https://img4.leboncoin.fr/ad-large/2d286ec2bcefecc092108ce130b62f703eab7fd0.jpg', 'France', 'Paris', '17, rue de la crèmerie', '75018', '', 7, 6, ''),
+
+('Chambre pavillon jardin ', 'Charming & Cosy Flat in Le Marais ', 'pour vous détendre à 20 min de Paris, en bordure de forêt ,nous vous accueillons dans une chambre de 15m2 av wc sdb 4m2 attenants privatifs, profitez d un accès direct jardin par la porte fenêtre dans la chambre , un petit salon de jardin vous y attend, Vous disposez au choix , de 2 lits 90 ou d un grand lit de 180. (possibilite lit bébé sur demande. )Linge de toilette et de lit fournis, lit fait à votre arrivée, frigo et micro onde à disposition , petit déjeuner en supplément 5Euro(s)/ pers. et possibilité plateau repas 8Euro(s)/ pers. WIFFI Haut Debit .A 20min Paris par rer D, gare 25 min à pieds, 10 min en voiture, ou bus à 5min pour allez gare.
+proximité commerces, restaurants, forêt de sénart, parc caillebotte, Dojo yerres,lycée St Pierre (possibilité location jeune étudiant )
+pour toute demande ENVOYEZ UN MAIL je réponds dans la journée et je vous envoie le lien pour reservation.
+, pour Juin : dispo du 30 juin au 2juillet. pour Juillet : dispo du 7 au 9, du 13 au 16 du 21 au 28 pour Aout : du 19 au 31.
+A partir de septembre libre sauf we du23 au 24
+', 37, 'https://img0.leboncoin.fr/ad-image/fab5516138fd3a28db5c1ea04ba1227091500f9a.jpg', 'France', 'Yerres', 'Allée des forêts', '91330', '', 8, 6, ''),
+
+('Grand 2 pièces de 70 m2 à RAMBOUILLET ', 'Grand 2 pièces de 70 m2 à RAMBOUILLET ', 'RAMBOUILLET à 50 m de la station du bus qui vous conduit à la gare RER, 30 minutes de PARIS MONTPARNASSE, venez découvrir ce grand 2 pièces tout équipé de 70m2. Cuisine, espace repas et salon accès terrasse privative, salle de bains double avec baignoire balnéo/jacuzzi et douche à jets, dressing aménagé, et vaste chambre avec lit king size. Situé dans une chaumière pleine de charme, profitez du jardin de 2000 m2, clos, arboré et sécurisé.
+115 € la nuit (petit déjeuner possible + 8 €)
+Je suis joignable au : 0781808563 ou par mail : lorinvest.in@gmail.com
+Bon séjour chez nous.
+', 115, 'https://img3.leboncoin.fr/ad-large/f40201bbebc855b95f87caba3b8cbe32325ae38a.jpg', 'France', 'Rambouillet', 'Rue Mitterand', '78120 ', '', 9, 6, ''),
+
+('Location chambre d hôtes  ', 'Location chambre d hôtes ', 'A louer chambre d hôtes avec sdb double vasque douche Italienne en tout 60 m2 . Pouvant accueillir de 1 à 4 personnes de la même famille ou même groupe dormants 2 par 2. Très confortable de bon standing et lumineuse dans un pavillon particulier au 3éme étage. Vue sur la marne et les villes aux alentours. Par beau temps on aperçois la pointe de la tour Eiffel.
+Place de Stationnement sur la terrasse , Wi Fi , penderie , 2 grands lits de 160 cm très confortable commode, tv, bureau, canapé, frigo, bouilloire, . idéal affaire, visite de la famille ou loisir. Exemple par nuit avec petit déj : pour 1 pers 75 € . 2 pers 85 € 3 ou 4 pers 135 € petit déjeuner inclus. Location à la semaine me contacter par mail ou téléphone.
+Entrée de la ville proche commerces à pied. Accès RER A (Est parisien ) en bus ou à pied 1 km. Centre de Paris en transport 15 Min Disney 25 Min.
+Plus de photos sur demande avec plaisir.
+', 100, 'https://img3.leboncoin.fr/ad-large/a0a4c921681e00c180b5d21ad0387805b45b631d.jpg', 'France', 'Bry-sur-Marne', 'Rue Clemenceau', '94360', '', 10, 6, '');
+=======
 ', 500, 'https://img1.leboncoin.fr/ad-image/ec5ed9c2d32e63e1bcba6c269499e9d40fd889e8.jpg', 'France', 'Paris', '12, rue Barbette', '75003', '', 6, 6, '');
+
+>>>>>>> refs/remotes/origin/master
