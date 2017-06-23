@@ -45,7 +45,7 @@
 
 					if(internauteEstConnecteEtEstAdmin())
 					{// BackOffice
-						echo '<ul class="nav navbar-nav navbar-right"><li class="dropdown"><ul class="dropdown-menu"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
+						echo '<ul class="nav navbar-nav navbar-right"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_annonces.php">Gestion des annonces</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_categories.php">Gestion des catégories</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php">Gestion des commentaires</a></li>';
