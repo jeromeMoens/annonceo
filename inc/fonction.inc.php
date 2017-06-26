@@ -47,5 +47,10 @@ function internauteEstConnecteEtEstAdmin() // cette fonction m'indique si le mem
     }
 }
 
+//-------------------------------------
+
+function moyenne($total, $nombre){
+    return $moyenne = $total/$nombre;
+}
 
 ?>
