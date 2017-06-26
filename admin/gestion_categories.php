@@ -7,6 +7,12 @@ if(!internauteEstConnecteEtEstAdmin())
 	exit();
 }
 
+// Lien vers l'ajout d'une catégorie et l'affichage de l'ensemble des catégories
+$content .= '<a style= "text-decoration: underline"; href="?action=affichage">Afficher les catégories</a><br>';
+$content .= '<a style= "text-decoration: underline"; href="?action=ajout">Ajouter une catégorie</a><br>';
+
+
+
 // Affichage des catégories
 
 if(isset($_GET['action']) && $_GET['action'] == 'affichage')
@@ -35,7 +41,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'affichage')
 
 
 // MODIFICATION CATEGORIE
-if(isset($_GET['action']) && $_GET['action'] == 'modification')
+if(isset($_GET['action']) && ($_GET['action'] == 'modification' || $_GET['action'] == 'ajout'))
 {
     if(isset($_GET['id_categorie']))
     {
