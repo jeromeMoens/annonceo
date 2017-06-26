@@ -72,8 +72,9 @@ if($_POST && isset($_POST['categorie']))
         $content .= "<a href=\"?action=suppression&id_annonce=$ligne[id_annonce]\" OnClick=\"return(confirm('En êtes-vous certain ?'))\";><img src=\"../inc/img/delete.png\"></a></td>";
         $content .= "</tr>";
     }
+    $content .= "</table>";
 }
-//----------- Modification des membres ------------------
+//----------- Modification des annonces ------------------
 
 if(isset($_GET['action']) && $_GET['action'] == 'modification')
 {
@@ -95,28 +96,30 @@ if(isset($_GET['action']) && $_GET['action'] == 'modification')
     $id_membre = isset($annonce_actuelle['id_membre']) ? $annonce_actuelle['id_membre'] : '';
     $id_photo = isset($annonce_actuelle['id_photo']) ? $annonce_actuelle['id_photo'] : '';
     $id_categorie = isset($annonce_actuelle['id_categorie']) ? $annonce_actuelle['id_categorie'] : '';
-
+    $date_enregistrement = isset($annonce_actuelle['date_enregistrement']) ? $annonce_actuelle['date_enregistrement'] : '';
+    
   if($_POST)
   {
       $content .= '<div class="alert alert-success">L\'annonce a bien été modifiée/créée</div>';
-          $req_modif_annonce = "REPLACE INTO membre(id_membre, pseudo, nom, prenom, telephone, email, civilite, statut) VALUES (:id_membre, :pseudo, :nom, :prenom, :telephone, :email, :civilite, :statut)";
+          $req_modif_annonce = "REPLACE INTO annonce(id_annonce, titre, description_courte, description_longue, prix, photo, pays, ville, adresse, cp, id_membre, id_photo, id_categorie, date_enregistrement) VALUES (:id_annonce, :titre, :description_courte, :description_longue, :prix, :photo, :pays, :ville, :adresse, :cp, :id_membre, :id_photo, :id_categorie, :date_enregistrement)";
           $r_annonce = $pdo->prepare($req_modif_annonce);
-          $r_annonce->bindValue(':id_annonce', $_POST['id_annonce'], PDO::PARAM_INT);
+          $r_annonce->bindValue(':id_annonce', $_POST['id_annonce'], PDO::PARAM_STR);
           $r_annonce->bindValue(':titre', $_POST['titre'], PDO::PARAM_STR);
           $r_annonce->bindValue(':description_courte', $_POST['description_courte'], PDO::PARAM_STR); // le paramètre de la requête SQL, la valeur qu'on lie, le type attendu
           $r_annonce->bindValue(':description_longue', $_POST['description_longue'], PDO::PARAM_STR);
-          $r_annonce->bindValue(':prix', $_POST['prix'], PDO::PARAM_INT);
+          $r_annonce->bindValue(':prix', $_POST['prix'], PDO::PARAM_STR);
           $r_annonce->bindValue(':photo', $_POST['photo'], PDO::PARAM_STR);
           $r_annonce->bindValue(':pays', $_POST['pays'], PDO::PARAM_STR);
           $r_annonce->bindValue(':ville', $_POST['ville'], PDO::PARAM_STR);
           $r_annonce->bindValue(':adresse', $_POST['adresse'], PDO::PARAM_STR);
-          $r_annonce->bindValue(':cp', $_POST['cp'], PDO::PARAM_INT);
-          $r_annonce->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_INT);
-          $r_annonce->bindValue(':id_photo', $_POST['id_photo'], PDO::PARAM_INT);
-          $r_annonce->bindValue(':id_categorie', $_POST['id_categorie'], PDO::PARAM_INT);
+          $r_annonce->bindValue(':cp', $_POST['cp'], PDO::PARAM_STR);
+          $r_annonce->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_STR);
+          $r_annonce->bindValue(':id_photo', $_POST['id_photo'], PDO::PARAM_STR);
+          $r_annonce->bindValue(':id_categorie', $_POST['id_categorie'], PDO::PARAM_STR);
+          $r_annonce->bindValue(':date_enregistrement', $_POST['date_enregistrement'], PDO::PARAM_STR);
           $r_annonce->execute();
   }
-echo
+$content .=
     '<form method="POST">
       <div class="form-group">
         <label for="id">Id_annonce</label>
@@ -158,13 +161,13 @@ echo
               {}
               else
               {
-                echo '<img style="width:100px;height:100px;" src="'. $valeurs .'">';
+                $content .= '<img style="width:100px;height:100px;" src="'. $valeurs .'">';
               }
             }
           }
         }
 
-        echo
+        $content .=
       '</div>
       <div class="form-group">
         <label for="pays">Pays</label>
@@ -194,10 +197,14 @@ echo
         <label for="id_categorie">Id_categorie</label>
         <input type="text" class="form-control" id="id_categorie" name="id_categorie" placeholder="Id_categorie" value="'. $id_categorie .'">
       </div>
+      <div class="form-group">
+        <label for="date">Date d\'enregistrement</label>
+        <input type="datetime" class="form-control" id="date" name="date_enregistrement" placeholder="Date d\'enregistrement/modification" value="'. $date_enregistrement .'">
+      </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>';
 }
-$content .= "</table>";
+
 echo $content;
 require_once("../inc/bas.inc.php");
 ?>
