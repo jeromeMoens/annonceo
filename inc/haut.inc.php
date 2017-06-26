@@ -25,7 +25,7 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <span><a class="navbar-brand" href="accueil.php" title="Annonceo">Annonceo</a></span>
+			      <span><a class="navbar-brand" href="<?php echo URL.'accueil.php'; ?>" title="Annonceo">Annonceo</a></span>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
