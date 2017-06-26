@@ -73,9 +73,11 @@ if(isset($_GET['action']) && ($_GET['action'] == 'modification' || $_GET['action
 $content .=
     '<form class="form-horizontal" method="POST">
       
-        <input type="hidden"  id="id" name="id_categorie" value="'. $id_categorie .'">
-      <legend>Modification de la catégorie n°'.$_GET["id_categorie"].' :</legend>
-      <div class="form-group">
+        <input type="hidden"  id="id" name="id_categorie" value="'. $id_categorie .'">';
+      if(isset($_GET["action"]) AND $_GET["action"] == "ajout")  
+      $content .= '<legend>Modification de la catégorie n°'.$_GET["id_categorie"].' :</legend>';
+	  $content .= 
+      '<div class="form-group">
         <label for="titre" class="control-label col-sm-2">Titre</label>
         <div class="col-sm-10">
         	<input type="text" class="form-control" id="titre" name="titre" placeholder="Titre" value="'. $titre .'">
