@@ -47,8 +47,8 @@
 					{// BackOffice
 						echo '<ul class="nav navbar-nav navbar-right"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_annonces.php">Gestion des annonces</a></li>';
-						echo '<li><a href="' . URL . 'admin/gestion_categories.php">Gestion des catégories</a></li>';
-						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php">Gestion des commentaires</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_categories.php?action=affichage">Gestion des catégories</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php?action=affichage">Gestion des commentaires</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_notes.php">Gestion des notes</a></li>';
 						echo '<li><a href="' . URL . 'admin/statistiques.php">Statistiques</a></li></ul></li></ul>';
 					}

@@ -13,7 +13,8 @@ if(isset($_GET['action']) && $_GET['action'] == 'suppression')
 {
   $pdo->query("DELETE FROM annonce WHERE id_annonce='$_GET[id_annonce]'");
   $content .= "<div class='alert alert-success'>L'annonce n° " . $_GET['id_annonce'] . " a bien été supprimé.</div>";
-  $_GET['action'] = 'affichage';
+  header("location;?action=affichage");
+  exit();
 }
 
 ?>
@@ -22,12 +23,12 @@ if(isset($_GET['action']) && $_GET['action'] == 'suppression')
   <div class="form-group">
     <select class="form-control" name="categorie">
       <option>Trier par catégorie</option>
-      <option value="2">Immobilier</option>
-      <option value="3">Multimédia</option>
-      <option value="4">Véhicules</option>
-      <option value="5">Loisirs</option>
-      <option value="6">Maison</option>
-      <option value="7">Vacances</option>
+      <option value="1">Immobilier</option>
+      <option value="2">Multimédia</option>
+      <option value="3">Véhicules</option>
+      <option value="4">Loisirs</option>
+      <option value="5">Maison</option>
+      <option value="6">Vacances</option>
     </select>
     <input type="submit"/>
   </div>
