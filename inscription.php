@@ -135,10 +135,10 @@ echo $content;
 
 			  <div class="radio col-sm-10">
 			      <label class="radio-inline" data-initialize="radio" id="civilite-0">
-			        <input name="civilite" type="radio" value="Femme"> <span class="radio-label">Femme</span>
+			        <input name="civilite" type="radio" value="f"> <span class="radio-label">Femme</span>
 			      </label>
 			      <label class="radio-inline" data-initialize="radio" id="civilite-1">
-			        <input name="civilite" type="radio" value="Homme"> <span class="radio-label">Homme</span>
+			        <input name="civilite" type="radio" value="m"> <span class="radio-label">Homme</span>
 			      </label>
 			    
 			  </div>

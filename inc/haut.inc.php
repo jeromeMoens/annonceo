@@ -25,7 +25,7 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <span><a class="navbar-brand" href="accueil.php" title="Annonceo">Annonceo</a></span>
+			      <span><a class="navbar-brand" href="<?php echo URL.'accueil.php'; ?>" title="Annonceo">Annonceo</a></span>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,8 +47,8 @@
 					{// BackOffice
 						echo '<ul class="nav navbar-nav navbar-right"><li><a href="' . URL . 'admin/gestion_membres.php">Gestion des membres</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_annonces.php">Gestion des annonces</a></li>';
-						echo '<li><a href="' . URL . 'admin/gestion_categories.php">Gestion des catégories</a></li>';
-						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php">Gestion des commentaires</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_categories.php?action=affichage">Gestion des catégories</a></li>';
+						echo '<li><a href="' . URL . 'admin/gestion_commentaires.php?action=affichage">Gestion des commentaires</a></li>';
 						echo '<li><a href="' . URL . 'admin/gestion_notes.php">Gestion des notes</a></li>';
 						echo '<li><a href="' . URL . 'admin/statistiques.php">Statistiques</a></li></ul></li></ul>';
 					}
